@@ -30,15 +30,19 @@ Seula is the step before your editor: you go through the frames from a shoot
 and choose the keepers. It is not a photo editor and not a library manager.
 
 - Opens a folder straight from disk. No import, no catalog, no library to
-  maintain. RAW+JPEG pairs read as one photo.
+  maintain. RAW+JPEG and RAW+HEIF pairs read as one photo.
 - Groups a burst into a single stack from capture time and image content, and
   steps through the folder's stacks one at a time so the rejects can be marked
   in one undoable action.
+- Suggests which photo to review first in each stack and says why, such as
+  sharper focus or open eyes. The analysis runs on your Mac (macOS 15 or
+  later).
 - Survey, Compare and Blink Compare for frames that are too similar to
   separate at a glance; focus peaking and autofocus point overlays for
   sharpness.
 - Stars, color labels and pick/reject flags are written as standard XMP, which
-  Lightroom, Capture One and other XMP-aware tools read.
+  Lightroom, Capture One and other XMP-aware tools read, or kept in Seula
+  without touching the files.
 - HDR photos are shown at full brightness on a display with the headroom for
   it, with warnings for blown highlights and blocked shadows.
 - Reads RAW files from Canon, Nikon, Sony, Fujifilm, OM System and Olympus,
@@ -53,7 +57,7 @@ scoring: the work happens on your Mac.
 Each release includes a `Seula-<version>.sha256` file:
 
 ```sh
-shasum -a 256 -c Seula-1.3.0.sha256
+shasum -a 256 -c Seula-1.4.0.sha256
 ```
 
 You can also check the signature and notarization of the mounted app:
